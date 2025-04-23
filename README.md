@@ -33,23 +33,26 @@ For this demonstration, I used EKS to create a Kubernetes cluster.
 ```
 eksctl create cluster --name demo-cluster --region us-west-2
 ```
-### Step4.  Kubernetes Manifests
+### Step 4.  Kubernetes Manifests
 
 Kubernetes manifests define the desired state of your application. We’ll create manifests for Deployments, Services, and Ingress.
 
 ![Screenshot 2025-04-23 162919](https://github.com/user-attachments/assets/fdbc6748-e1b3-4221-b165-65229e93971e)
 
+### Step 5. Helm Chart Creation and Configuration
+Helm simplifies the management of Kubernetes applications by packaging them into charts.
+
 
 ## Create a Helm Chart
-### Step 1: Initialize a Helm Chart:
+#### Step 1: Initialize a Helm Chart:
 ```
 helm create go-web-app-chart
 ```
-### Step 2: Customize Values for Different Environments:
+#### Step 2: Customize Values for Different Environments:
 Define different configurations for development, staging, and production environments in the values.yaml file.
 
 
-### Step 5. Continuous Integration with GitHub Actions
+### Step 6. Continuous Integration with GitHub Actions
 GitHub Actions allows you to automate the building and testing of your application whenever changes are pushed to your repository.
 
 Example Workflow File (.github/workflows/ci.yml)
@@ -61,7 +64,7 @@ Define a CI Pipeline:
 
 
 
-### Step 6. Continuous Delivery with Argo CD
+### Step 7. Continuous Delivery with Argo CD
 - Argo CD automates the deployment of the application to your Kubernetes cluster based on the state of your Git repository.
 
 
@@ -83,9 +86,6 @@ kubectl get svc argocd-server -n argocd
 ````
 ![Screenshot 2025-04-22 203741](https://github.com/user-attachments/assets/937fe6bd-a6c3-4f4f-b214-989d108d1d2f)
 
-
-### Step 7. Helm Chart Creation and Configuration
-Helm simplifies the management of Kubernetes applications by packaging them into charts.
 
 
 ### Step 8. Ingress Controller and DNS Mapping
