@@ -30,6 +30,8 @@ Step-by-Step Implementation
 ### Step 3. Kubernetes Manifests
 Kubernetes manifests define the desired state of your application. We’ll create manifests for Deployments, Services, and Ingress.
 
+![Screenshot 2025-04-23 162919](https://github.com/user-attachments/assets/fdbc6748-e1b3-4221-b165-65229e93971e)
+
 
 
 
