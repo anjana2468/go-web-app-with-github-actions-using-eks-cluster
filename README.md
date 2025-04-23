@@ -27,13 +27,13 @@ Step-by-Step Implementation
 - docker run -p 8081:8081 -it 8217089795/go-web-app:v1
 - docker push 8217089795/go-web-app:v1
 ```
-2. Kubernetes Manifests
+### Step 3. Kubernetes Manifests
 Kubernetes manifests define the desired state of your application. We’ll create manifests for Deployments, Services, and Ingress.
 
 
 
 
-### Step 3. Continuous Integration with GitHub Actions
+### Step 4. Continuous Integration with GitHub Actions
 GitHub Actions allows you to automate the building and testing of your application whenever changes are pushed to your repository.
 
 Example Workflow File (.github/workflows/ci.yml)
@@ -43,7 +43,7 @@ Define a CI Pipeline:
 
 
 
-### Step 4. Continuous Delivery with Argo CD
+### Step 5. Continuous Delivery with Argo CD
 - Argo CD automates the deployment of the application to your Kubernetes cluster based on the state of your Git repository.
 
 ![Screenshot 2025-04-22 203741](https://github.com/user-attachments/assets/937fe6bd-a6c3-4f4f-b214-989d108d1d2f)
@@ -61,15 +61,15 @@ kubectl patch svc argocd-server -n argocd -p '{\"spec\": {\"type\": \"LoadBalanc
 Get the Loadbalancer service IP
 kubectl get svc argocd-server -n argocd
 
-### Step 5. Kubernetes Cluster Creation and Setup
+### Step 6. Kubernetes Cluster Creation and Setup
 For this demonstration, I used EKS to create a Kubernetes cluster.
 
 eksctl create cluster --name demo-cluster --region us-west-2
 
-### Step 6. Helm Chart Creation and Configuration
+### Step 7. Helm Chart Creation and Configuration
 Helm simplifies the management of Kubernetes applications by packaging them into charts.
 
-Create a Helm Chart
+## Create a Helm Chart
 Step 1: Initialize a Helm Chart:
 helm create go-web-app-chart
 
