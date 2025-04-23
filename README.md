@@ -39,20 +39,33 @@ Kubernetes manifests define the desired state of your application. We’ll creat
 
 ![Screenshot 2025-04-23 162919](https://github.com/user-attachments/assets/fdbc6748-e1b3-4221-b165-65229e93971e)
 
-### Step 5. Helm Chart Creation and Configuration
+### Step 5. Ingress Controller and DNS Mapping
+Ingress controllers route external traffic to services within the cluster.
+
+Set Up an Ingress Controller
+Deploy NGINX Ingress Controller on EKS:
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.1/deploy/static/provider/aws/deploy.yaml
+```
+
+
+![Screenshot 2025-04-23 153944](https://github.com/user-attachments/assets/772ee407-0974-45e5-ac33-ea8c41cc8a03)
+
+
+### Step 6. Helm Chart Creation and Configuration
 Helm simplifies the management of Kubernetes applications by packaging them into charts.
 
 
 ## Create a Helm Chart
-#### Step 1: Initialize a Helm Chart:
+  - Initialize a Helm Chart:
 ```
 helm create go-web-app-chart
 ```
-#### Step 2: Customize Values for Different Environments:
+  - Customize Values for Different Environments:
 Define different configurations for development, staging, and production environments in the values.yaml file.
 
 
-### Step 6. Continuous Integration with GitHub Actions
+### Step 7. Continuous Integration with GitHub Actions
 GitHub Actions allows you to automate the building and testing of your application whenever changes are pushed to your repository.
 
 Example Workflow File (.github/workflows/ci.yml)
@@ -64,7 +77,7 @@ Define a CI Pipeline:
 
 
 
-### Step 7. Continuous Delivery with Argo CD
+### Step 8. Continuous Delivery with Argo CD
 - Argo CD automates the deployment of the application to your Kubernetes cluster based on the state of your Git repository.
 
 
@@ -86,19 +99,6 @@ kubectl get svc argocd-server -n argocd
 ````
 ![Screenshot 2025-04-22 203741](https://github.com/user-attachments/assets/937fe6bd-a6c3-4f4f-b214-989d108d1d2f)
 
-
-
-### Step 8. Ingress Controller and DNS Mapping
-Ingress controllers route external traffic to services within the cluster.
-
-Set Up an Ingress Controller
-Deploy NGINX Ingress Controller on EKS:
-```
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.1/deploy/static/provider/aws/deploy.yaml
-```
-
-
-![Screenshot 2025-04-23 153944](https://github.com/user-attachments/assets/772ee407-0974-45e5-ac33-ea8c41cc8a03)
 
 
 ### Step 9. End-to-End CI/CD Demonstration
