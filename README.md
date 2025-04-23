@@ -36,7 +36,8 @@ GitHub Actions allows you to automate the building and testing of your applicati
 
 Example Workflow File (.github/workflows/ci.yml)
 Define a CI Pipeline:
-[Screenshot 2025-04-23 130456](https://github.com/user-attachments/assets/9f59c9fb-1cc4-4183-9e87-0f7988a3cba2)
+![Screenshot 2025-04-23 124501](https://github.com/user-attachments/assets/3e7b35e2-6ff1-4d4f-8200-a489f3ca46dd)
+
 
 4. Continuous Delivery with Argo CD
 - Argo CD automates the deployment of the application to your Kubernetes cluster based on the state of your Git repository.
