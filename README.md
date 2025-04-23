@@ -40,7 +40,9 @@ GitHub Actions allows you to automate the building and testing of your applicati
 
 Example Workflow File (.github/workflows/ci.yml)
 Define a CI Pipeline:
-![Screenshot 2025-04-23 160023](https://github.com/user-attachments/assets/9b11eedf-fb5b-4cab-a51c-4d3608c4db8f)
+
+
+![Screenshot 2025-04-23 163402](https://github.com/user-attachments/assets/75337ff1-51eb-4523-9b76-f71419e0b34b)
 
 
 
@@ -55,39 +57,45 @@ Install Argo CD on your Kubernetes cluster.
 Connect Argo CD to your GitHub Repository to monitor for changes and automatically deploy updates.
 
 kubectl create namespace argocd
+```
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-
+````
 Access the Argo CD UI (Loadbalancer service)
+```
 kubectl patch svc argocd-server -n argocd -p '{\"spec\": {\"type\": \"LoadBalancer\"}
-
+```
 Get the Loadbalancer service IP
+```
 kubectl get svc argocd-server -n argocd
-
+````
 ### Step 6. Kubernetes Cluster Creation and Setup
 For this demonstration, I used EKS to create a Kubernetes cluster.
-
+```
 eksctl create cluster --name demo-cluster --region us-west-2
-
+```
 ### Step 7. Helm Chart Creation and Configuration
 Helm simplifies the management of Kubernetes applications by packaging them into charts.
 
 ## Create a Helm Chart
-Step 1: Initialize a Helm Chart:
+### Step 1: Initialize a Helm Chart:
+```
 helm create go-web-app-chart
-
-Step 2: Customize Values for Different Environments:
+```
+### Step 2: Customize Values for Different Environments:
 Define different configurations for development, staging, and production environments in the values.yaml file.
 
-7. Ingress Controller and DNS Mapping
+### Step 8. Ingress Controller and DNS Mapping
 Ingress controllers route external traffic to services within the cluster.
 
 Set Up an Ingress Controller
 Deploy NGINX Ingress Controller on EKS:
-
+```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.1/deploy/static/provider/aws/deploy.yaml
+```
+
 ![Screenshot 2025-04-23 153944](https://github.com/user-attachments/assets/772ee407-0974-45e5-ac33-ea8c41cc8a03)
 
-8. End-to-End CI/CD Demonstration
+### Step 9. End-to-End CI/CD Demonstration
 Now that everything is set up, let’s demonstrate the full CI/CD pipeline:
 
 Push Code to GitHub: Trigger the GitHub Actions pipeline to build, test, and push Docker images.
