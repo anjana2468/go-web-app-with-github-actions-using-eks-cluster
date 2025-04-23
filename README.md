@@ -21,10 +21,11 @@ Step 1: Create a Dockerfile:
 ![Screenshot 2025-04-23 123220](https://github.com/user-attachments/assets/4248c596-fe19-4749-befb-cc742705539d)
 
 Step 2: Build and Run and push the Docker Image to Docker Registry:
+```
 - docker build -t 8217089795/go-web-app:v1 .
 - docker run -p 8081:8081 -it 8217089795/go-web-app:v1
 - docker push 8217089795/go-web-app:v1
-
+```
 2. Kubernetes Manifests
 Kubernetes manifests define the desired state of your application. We’ll create manifests for Deployments, Services, and Ingress.
 
