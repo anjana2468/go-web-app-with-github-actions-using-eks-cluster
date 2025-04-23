@@ -40,6 +40,13 @@ Kubernetes manifests define the desired state of your application. We’ll creat
 ![Screenshot 2025-04-23 162919](https://github.com/user-attachments/assets/fdbc6748-e1b3-4221-b165-65229e93971e)
 
 
+## Create a Helm Chart
+### Step 1: Initialize a Helm Chart:
+```
+helm create go-web-app-chart
+```
+### Step 2: Customize Values for Different Environments:
+Define different configurations for development, staging, and production environments in the values.yaml file.
 
 
 ### Step 5. Continuous Integration with GitHub Actions
@@ -80,13 +87,6 @@ kubectl get svc argocd-server -n argocd
 ### Step 7. Helm Chart Creation and Configuration
 Helm simplifies the management of Kubernetes applications by packaging them into charts.
 
-## Create a Helm Chart
-### Step 1: Initialize a Helm Chart:
-```
-helm create go-web-app-chart
-```
-### Step 2: Customize Values for Different Environments:
-Define different configurations for development, staging, and production environments in the values.yaml file.
 
 ### Step 8. Ingress Controller and DNS Mapping
 Ingress controllers route external traffic to services within the cluster.
