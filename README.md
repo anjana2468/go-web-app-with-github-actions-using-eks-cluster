@@ -12,7 +12,8 @@ It uses **GitHub Actions**, **DockerHub**, **Helm**, **ArgoCD**, and **Kubernete
 - **ArgoCD**: Automatically syncs the Kubernetes cluster based on GitOps repo changes.
 
 Step-by-Step Implementation
-Step 1: Create a Dockerfile:
+
+### Step 1: Create a Dockerfile:
 
 - Define the build environment using a Golang image.
 - Compile the application in the build stage.
@@ -20,7 +21,7 @@ Step 1: Create a Dockerfile:
 
 ![Screenshot 2025-04-23 123220](https://github.com/user-attachments/assets/4248c596-fe19-4749-befb-cc742705539d)
 
-Step 2: Build and Run and push the Docker Image to Docker Registry:
+### Step 2: Build and Run and push the Docker Image to Docker Registry:
 ```
 - docker build -t 8217089795/go-web-app:v1 .
 - docker run -p 8081:8081 -it 8217089795/go-web-app:v1
@@ -32,7 +33,7 @@ Kubernetes manifests define the desired state of your application. We’ll creat
 
 
 
-Step 3. Continuous Integration with GitHub Actions
+### Step 3. Continuous Integration with GitHub Actions
 GitHub Actions allows you to automate the building and testing of your application whenever changes are pushed to your repository.
 
 Example Workflow File (.github/workflows/ci.yml)
@@ -42,7 +43,7 @@ Define a CI Pipeline:
 
 
 
-4. Continuous Delivery with Argo CD
+### Step 4. Continuous Delivery with Argo CD
 - Argo CD automates the deployment of the application to your Kubernetes cluster based on the state of your Git repository.
 
 ![Screenshot 2025-04-22 203741](https://github.com/user-attachments/assets/937fe6bd-a6c3-4f4f-b214-989d108d1d2f)
@@ -60,12 +61,12 @@ kubectl patch svc argocd-server -n argocd -p '{\"spec\": {\"type\": \"LoadBalanc
 Get the Loadbalancer service IP
 kubectl get svc argocd-server -n argocd
 
-5. Kubernetes Cluster Creation and Setup
+### Step 5. Kubernetes Cluster Creation and Setup
 For this demonstration, I used EKS to create a Kubernetes cluster.
 
 eksctl create cluster --name demo-cluster --region us-west-2
 
-6. Helm Chart Creation and Configuration
+### Step 6. Helm Chart Creation and Configuration
 Helm simplifies the management of Kubernetes applications by packaging them into charts.
 
 Create a Helm Chart
