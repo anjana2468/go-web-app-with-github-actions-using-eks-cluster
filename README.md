@@ -102,11 +102,15 @@ Push Code to GitHub: Trigger the GitHub Actions pipeline to build, test, and pus
 Argo CD Deployment: Argo CD detects changes in the Git repository and automatically syncs the application state to the Kubernetes cluster.
 Access the Application: Use the Ingress URL or mapped DNS to access the running application.
 
+![Screenshot 2025-04-22 161321](https://github.com/user-attachments/assets/0b8a3709-5bd4-46e4-8260-a9bafe4efa5e)
+
+![Screenshot 2025-04-22 161339](https://github.com/user-attachments/assets/653a0f8d-625a-458f-a409-59c7721ce7fc)
+
 ![Screenshot 2025-04-22 161421](https://github.com/user-attachments/assets/a932482c-79b0-499a-9aeb-9fcb81e8339c)
 
 ![Screenshot 2025-04-22 161438](https://github.com/user-attachments/assets/18b6f343-f3b6-4a03-8ca6-eb3027af001c)
 
-![Screenshot 2025-04-22 161339](https://github.com/user-attachments/assets/653a0f8d-625a-458f-a409-59c7721ce7fc)
+
 
 
 
