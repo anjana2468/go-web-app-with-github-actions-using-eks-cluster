@@ -99,7 +99,8 @@ Get the Loadbalancer service IP
 ```
 kubectl get svc argocd-server -n argocd
 ````
-![Screenshot 2025-04-22 203741](https://github.com/user-attachments/assets/937fe6bd-a6c3-4f4f-b214-989d108d1d2f)
+![fi](https://github.com/user-attachments/assets/c2c218a1-66c5-4030-8638-edb2a1ad8b87)
+
 
 
 
