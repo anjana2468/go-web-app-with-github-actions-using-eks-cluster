@@ -93,7 +93,9 @@ Deploy NGINX Ingress Controller on EKS:
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.1/deploy/static/provider/aws/deploy.yaml
 ```
 
+
 ![Screenshot 2025-04-23 153944](https://github.com/user-attachments/assets/772ee407-0974-45e5-ac33-ea8c41cc8a03)
+
 
 ### Step 9. End-to-End CI/CD Demonstration
 Now that everything is set up, let’s demonstrate the full CI/CD pipeline:
