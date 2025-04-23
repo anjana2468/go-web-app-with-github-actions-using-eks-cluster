@@ -1,5 +1,7 @@
 # Go Web App - CI/CD Pipeline with GitHub Actions, DockerHub, ArgoCD, and Kubernetes
 
+![Screenshot 2025-04-22 222857](https://github.com/user-attachments/assets/c3364828-5fa3-4252-9014-1a022219d0ab)
+
 This project implements a CI/CD pipeline and GitOps-based deployment workflow for a simple Go web application.  
 It uses **GitHub Actions**, **DockerHub**, **Helm**, **ArgoCD**, and **Kubernetes**.
 
@@ -116,7 +118,15 @@ Access the Application: Use the Ingress URL or mapped DNS to access the running 
 
 ![Screenshot 2025-04-22 161438](https://github.com/user-attachments/assets/18b6f343-f3b6-4a03-8ca6-eb3027af001c)
 
+How to Contribute Contributions are welcome! If you'd like to improve this project or add new features, feel free to fork the repository and submit a pull request.
 
+1.Fork the repository.
+
+2.Create a new branch with your feature/bug fix.
+
+3.Push the branch and open a pull request.
+
+License This project is open-source and available under the MIT License.
 
 
 
