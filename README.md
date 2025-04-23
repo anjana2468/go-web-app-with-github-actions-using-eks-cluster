@@ -57,7 +57,6 @@ Define a CI Pipeline:
 ### Step 6. Continuous Delivery with Argo CD
 - Argo CD automates the deployment of the application to your Kubernetes cluster based on the state of your Git repository.
 
-![Screenshot 2025-04-22 203741](https://github.com/user-attachments/assets/937fe6bd-a6c3-4f4f-b214-989d108d1d2f)
 
 Setting Up Argo CD
 Install Argo CD on your Kubernetes cluster.
@@ -75,6 +74,8 @@ Get the Loadbalancer service IP
 ```
 kubectl get svc argocd-server -n argocd
 ````
+![Screenshot 2025-04-22 203741](https://github.com/user-attachments/assets/937fe6bd-a6c3-4f4f-b214-989d108d1d2f)
+
 
 ### Step 7. Helm Chart Creation and Configuration
 Helm simplifies the management of Kubernetes applications by packaging them into charts.
