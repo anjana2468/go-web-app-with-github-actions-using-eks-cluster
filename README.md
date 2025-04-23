@@ -28,7 +28,7 @@ Step 2: Build and Run and push the Docker Image to Docker Registry:
 2. Kubernetes Manifests
 Kubernetes manifests define the desired state of your application. We’ll create manifests for Deployments, Services, and Ingress.
 
-![Screenshot 2025-04-23 124750](https://github.com/user-attachments/assets/aa4103f7-8e20-4d13-af2b-418872f45c80)
+
 
 
 Step 3. Continuous Integration with GitHub Actions
@@ -36,7 +36,9 @@ GitHub Actions allows you to automate the building and testing of your applicati
 
 Example Workflow File (.github/workflows/ci.yml)
 Define a CI Pipeline:
-![Screenshot 2025-04-23 124501](https://github.com/user-attachments/assets/3e7b35e2-6ff1-4d4f-8200-a489f3ca46dd)
+![Screenshot 2025-04-23 160023](https://github.com/user-attachments/assets/9b11eedf-fb5b-4cab-a51c-4d3608c4db8f)
+
+
 
 
 4. Continuous Delivery with Argo CD
